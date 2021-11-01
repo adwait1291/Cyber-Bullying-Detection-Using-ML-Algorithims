@@ -14,6 +14,7 @@ from nltk import pos_tag
 import nltk
 nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')
+nltk.download('wordnet')
 stopwords = nltk.corpus.stopwords.words('english')
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
