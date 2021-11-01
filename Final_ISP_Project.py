@@ -95,19 +95,19 @@ def transform_input(self, text):
 
 
 
-pickle_in = open("/Users/adwaitkesharwani/Desktop/results/vectorizer.pkl","rb")
+pickle_in = open("vectorizer.pkl","rb")
 vect=pickle.load(pickle_in)
 
-pickle_in = open("/Users/adwaitkesharwani/Desktop/results/LinearSVC.pkl","rb")
+pickle_in = open("LinearSVC.pkl","rb")
 LinearSVC = pickle.load(pickle_in)
 
-pickle_in = open("/Users/adwaitkesharwani/Desktop/results/MultinomialNB.pkl","rb")
+pickle_in = open("MultinomialNB.pkl","rb")
 MultinomialNB = pickle.load(pickle_in)
 
-pickle_in = open("/Users/adwaitkesharwani/Desktop/results/LogisticRegression.pkl","rb")
+pickle_in = open("LogisticRegression.pkl","rb")
 LogisticRegression = pickle.load(pickle_in)
 
-pickle_in = open("/Users/adwaitkesharwani/Desktop/results/KNeighborsClassifier.pkl","rb")
+pickle_in = open("KNeighborsClassifier.pkl","rb")
 KNeighborsClassifier = pickle.load(pickle_in)
 
 
