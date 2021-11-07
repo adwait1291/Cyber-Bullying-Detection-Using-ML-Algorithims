@@ -161,6 +161,8 @@ if st.button("Predict"):
                     st.success('prediction: {}'.format("Bullying comment!!!!"))
                 else:
                     st.success('prediction: {}'.format("Normal comment."))
+        else:
+                st.write("You haven't selected any model :(")
 
 
 
