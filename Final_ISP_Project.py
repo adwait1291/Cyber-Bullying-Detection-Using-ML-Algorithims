@@ -19,13 +19,7 @@ stopwords = nltk.corpus.stopwords.words('english')
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 
-
-
-
-
-
-
-
+#---------------Functions to clean the input text--------------#
 
 def tokenize_remove_punctuation(text):
         clean_text = []
@@ -91,10 +85,7 @@ def transform_input(self, text):
         text = clean_text(text)
         return text
 
-
-
-
-
+#---------------Loading trained models--------------#
 
 
 pickle_in = open("vectorizer.pkl","rb")
@@ -112,6 +103,7 @@ LogisticRegression = pickle.load(pickle_in)
 pickle_in = open("KNeighborsClassifier.pkl","rb")
 KNeighborsClassifier = pickle.load(pickle_in)
 
+#---------------HTML--------------#
 
 html_temp = """
     <div style="background-color: pink;padding:10px;
@@ -123,83 +115,48 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 
 
-
+#---------------Creating selectbox--------------#
 
 option = st.selectbox(
      'Select Model',
     ('Select','LinearSVC', 'KNN', 'Logistic Regression', 'MultinomialNB'))
 
 
+#---------------Input--------------#
+
+comment = st.text_input("Enter any comment","Type Here")
+pred = (1,2)
+if st.button("Predict"):
+     comment = clean_text(comment)
+     comment = np.array([comment])
+     comment = pd.Series(comment)
+     comment =vect.transform(comment)
 
 
-
+#---------------Predicting output--------------#
 
 if option == 'MultinomialNB':
-    comment = st.text_input("Enter any comment","Type Here")
-    pred = (1,2)
-    if st.button("Predict"):
-        comment = clean_text(comment)
-        st.write(comment)
-        comment = np.array([comment])
-        comment = pd.Series(comment)
-        comment =vect.transform(comment)
         pred = MultinomialNB.predict(comment)
         if(pred[0] == 1):
            st.success('prediction: {}'.format("Bullying comment!!!!"))
         else:
            st.success('prediction: {}'.format("Normal comment."))
         
-        
-        
-        
-if option == 'LinearSVC':
-    comment = st.text_input("Enter any comment","Type Here")
-    pred = (1,2)
-    if st.button("Predict"):
-        comment = clean_text(comment)
-        st.write(comment)
-        comment = np.array([comment])
-        comment = pd.Series(comment)
-        comment =vect.transform(comment)
+elif option == 'LinearSVC':
         pred = LinearSVC.predict(comment)
         if(pred[0] == 1):
             st.success('prediction: {}'.format("Bullying comment!!!!"))
         else:
             st.success('prediction: {}'.format("Normal comment."))
         
-        
-        
-        
-        
-if option == 'KNN':
-    comment = st.text_input("Enter any comment","Type Here")
-    pred = (1,2)
-    if st.button("Predict"):
-        comment = clean_text(comment)
-        st.write(comment)
-        comment = np.array([comment])
-        comment = pd.Series(comment)
-        comment =vect.transform(comment)
+elif option == 'KNN':
         pred = KNeighborsClassifier.predict(comment)
         if(pred[0] == 1):
             st.success('prediction: {}'.format("Bullying comment!!!!"))
         else:
             st.success('prediction: {}'.format("Normal comment."))
         
-        
-        
-        
-        
-if option == 'Logistic Regression':
-    comment = st.text_input("Enter any comment","Type Here")
-    pred = (1,2)
-    if st.button("Predict"):
-        comment = clean_text(comment)
-        st.write(comment)
-        comment = np.array([comment])
-        comment = pd.Series(comment)
-        comment =vect.transform(comment)
-        pred = LogisticRegression.predict(comment)
+elif option == 'Logistic Regression':
         if(pred[0] == 1):
             st.success('prediction: {}'.format("Bullying comment!!!!"))
         else:
