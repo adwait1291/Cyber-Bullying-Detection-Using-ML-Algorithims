@@ -125,42 +125,42 @@ option = st.selectbox(
 #---------------Input--------------#
 
 comment = st.text_input("Enter any comment","Type Here")
-pred = (1,2)
-if st.button("Predict"):
-     comment = clean_text(comment)
-     comment = np.array([comment])
-     comment = pd.Series(comment)
-     comment =vect.transform(comment)
-
+comment = clean_text(comment)
+comment = np.array([comment])
+comment = pd.Series(comment)
+comment =vect.transform(comment)
+pred = [0]# creating a list to store the output value
+     
 
 #---------------Predicting output--------------#
 
-if option == 'MultinomialNB':
-        pred = MultinomialNB.predict(comment)
-        if(pred[0] == 1):
-           st.success('prediction: {}'.format("Bullying comment!!!!"))
-        else:
-           st.success('prediction: {}'.format("Normal comment."))
-        
-elif option == 'LinearSVC':
-        pred = LinearSVC.predict(comment)
-        if(pred[0] == 1):
-            st.success('prediction: {}'.format("Bullying comment!!!!"))
-        else:
-            st.success('prediction: {}'.format("Normal comment."))
-        
-elif option == 'KNN':
-        pred = KNeighborsClassifier.predict(comment)
-        if(pred[0] == 1):
-            st.success('prediction: {}'.format("Bullying comment!!!!"))
-        else:
-            st.success('prediction: {}'.format("Normal comment."))
-        
-elif option == 'Logistic Regression':
-        if(pred[0] == 1):
-            st.success('prediction: {}'.format("Bullying comment!!!!"))
-        else:
-            st.success('prediction: {}'.format("Normal comment."))
+if st.button("Predict"):
+        if option == 'MultinomialNB':
+                pred = MultinomialNB.predict(comment)
+                if(pred[0] == 1):
+                   st.success('prediction: {}'.format("Bullying comment!!!!"))
+                else:
+                   st.success('prediction: {}'.format("Normal comment."))
+
+        elif option == 'LinearSVC':
+                pred = LinearSVC.predict(comment)
+                if(pred[0] == 1):
+                    st.success('prediction: {}'.format("Bullying comment!!!!"))
+                else:
+                    st.success('prediction: {}'.format("Normal comment."))
+
+        elif option == 'KNN':
+                pred = KNeighborsClassifier.predict(comment)
+                if(pred[0] == 1):
+                    st.success('prediction: {}'.format("Bullying comment!!!!"))
+                else:
+                    st.success('prediction: {}'.format("Normal comment."))
+
+        elif option == 'Logistic Regression':
+                if(pred[0] == 1):
+                    st.success('prediction: {}'.format("Bullying comment!!!!"))
+                else:
+                    st.success('prediction: {}'.format("Normal comment."))
 
 
 
