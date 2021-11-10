@@ -105,36 +105,6 @@ pickle_in = open("KNeighborsClassifier.pkl","rb")
 KNeighborsClassifier = pickle.load(pickle_in)
 
 #---------------HTML--------------#
-def get_base64_of_bin_file(bin_file):
-    """
-    function to read png file 
-    ----------
-    bin_file: png -> the background image in local folder
-    """
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    """
-    function to display png as bg
-    ----------
-    png_file: png -> the background image in local folder
-    """
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("bin_str");
-    background-size: cover;
-    }
-    </style>
-    '''
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('background.png')
 
 html_temp = """
     <div style="background-color: pink;padding:10px;
