@@ -125,11 +125,11 @@ def set_png_as_page_bg(png_file):
     page_bg_img = '''
     <style>
     body {
-    background-image: url("background.png");
+    background-image: url("bin_str");
     background-size: cover;
     }
     </style>
-    ''' % bin_str
+    '''
     
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
