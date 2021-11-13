@@ -136,21 +136,21 @@ pred = [0]# creating a list to store the output value
 #---------------Predicting output--------------#
 
 if st.button("Predict"):
-        if option == 'MultinomialNB':
+        if option == 'Multinomial Naive Bayes':
                 pred = MultinomialNB.predict(comment)
                 if(pred[0] == 1):
                    st.success('prediction: {}'.format("Bullying comment!!!!"))
                 else:
                    st.success('prediction: {}'.format("Normal comment."))
 
-        elif option == 'LinearSVC':
+        elif option == 'Linear SVC':
                 pred = LinearSVC.predict(comment)
                 if(pred[0] == 1):
                     st.success('prediction: {}'.format("Bullying comment!!!!"))
                 else:
                     st.success('prediction: {}'.format("Normal comment."))
 
-        elif option == 'KNN':
+        elif option == 'K-Nearest Neighbour':
                 pred = KNeighborsClassifier.predict(comment)
                 if(pred[0] == 1):
                     st.success('prediction: {}'.format("Bullying comment!!!!"))
