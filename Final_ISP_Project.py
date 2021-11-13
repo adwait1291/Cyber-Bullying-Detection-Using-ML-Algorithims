@@ -107,10 +107,10 @@ KNeighborsClassifier = pickle.load(pickle_in)
 #---------------HTML--------------#
 
 html_temp = """
-    <div style="background-color: pink;padding:10px;
+    <div style="background-color: pink;padding:10px; border-radius: 25px;
     height: 100%;
     width: 100%;">
-    <h2 style="color:white;text-align:center;">Cyber bullying detector</h2>
+    <h2 style="color:white;text-align:center;">Cyber Bullying Detector</h2>
     </div>
     """
 st.markdown(html_temp,unsafe_allow_html=True)
@@ -120,12 +120,12 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 option = st.selectbox(
      'Select Model',
-    ('Select','LinearSVC', 'KNN', 'Logistic Regression', 'MultinomialNB'))
+    ('Select','Linear SVC', 'K-Nearest Neighbour', 'Logistic Regression', 'Multinomial Naive Bayes'))
 
 
 #---------------Input--------------#
 
-comment = st.text_input("Enter any comment","Type Here")
+comment = st.text_input("Enter any comment"," ")
 comment = clean_text(comment)
 comment = np.array([comment])
 comment = pd.Series(comment)
