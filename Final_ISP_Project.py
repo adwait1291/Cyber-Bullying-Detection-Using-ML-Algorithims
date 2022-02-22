@@ -13,6 +13,7 @@ import streamlit as st
 import string
 from nltk import pos_tag
 import nltk_download_utils
+import nltk
 
 stopwords = nltk.corpus.stopwords.words('english')
 from nltk.corpus import wordnet
