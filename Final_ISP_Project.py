@@ -16,7 +16,7 @@ import nltk
 nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')
 nltk.download('wordnet')
-nltk.download()
+nltk.download('omw-1.4')
 
 stopwords = nltk.corpus.stopwords.words('english')
 from nltk.corpus import wordnet
