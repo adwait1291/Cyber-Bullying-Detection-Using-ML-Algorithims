@@ -12,11 +12,8 @@ import base64
 import streamlit as st 
 import string
 from nltk import pos_tag
-import nltk
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
+import nltk_download_utils
+
 stopwords = nltk.corpus.stopwords.words('english')
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
