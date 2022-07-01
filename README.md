@@ -5,7 +5,7 @@
 <br>
 
 ## Project description
-Machine learning techniques are used in this project to categorise comments as bullying or non-bullying. All the trained models are deployed as a web application using Streamlit that can be viewed by clicking the button above. The dataset used for this project has 20000 comments labelled as bullying and non-bullying. The dataset was obtained from the Kaggle website and is uploaded to this repository.
+Machine learning techniques are used in this project to categorise comments as bullying or non-bullying. All the trained models are deployed as a web application using Streamlit that can be viewed by clicking the button above. The dataset used for this project is taken from the Kaggle website and has 20000 comments labelled as bullying and non-bullying. The detailed python notebook of this project is uploaded to this repository and can be run after giving the correct path of the dataset
 </br>
 </br>
 
