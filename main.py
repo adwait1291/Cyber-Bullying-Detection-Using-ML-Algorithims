@@ -109,7 +109,7 @@ KNeighborsClassifier = pickle.load(pickle_in)
 #---------------HTML--------------#
 
 html_temp = """
-    <div style="background-color: pink;padding:10px; border-radius: 5px;
+    <div style="background-color: blue;padding:10px; border-radius: 5px;
     height: 100%;
     width: 100%;">
     <h2 style="color:white;text-align:center;">Cyber Bullying Detector</h2>
