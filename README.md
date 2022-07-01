@@ -5,20 +5,18 @@
 </br>
 
 ## Project Description
-This Project uses machine learning algorithms to classify comments as bullying and non-bullying.
-</br>
+This project uses machine learning algorithms to classify comments as bullying and non-bullying.
 </br>
 
 ## Dataset Description
-The dataset used in this project is taken from the Kaggle website. The dataset has 20000 comments labeled as bullying and non-bullying. 
-</br>
+The dataset used in this project is taken from the Kaggle website. The dataset has 20000 comments labelled as bullying and non-bullying. 
 </br>
 
 ## Text preprocessing steps 
 1. Converted text to lower-case
 2. Removed punctuations
 3. Removed words containing numbers
-4. Removed english stopwords
+4. Removed English stopwords
 5. Part of speech tagging
 6. Used Lemmatization
 7. Removed words with only one letter
@@ -30,7 +28,7 @@ The dataset used in this project is taken from the Kaggle website. The dataset h
 
 ## Algorithms
 1. K-Nearest Neighbors
-2. Naive Bayes
+2. Naive Bayes Classifier
 3. Logistic Regression
 4. Support Vector Classifier
 </br>
