@@ -22,7 +22,6 @@ Machine learning techniques are used in this project to categorise comments as b
 ## Feature extraction
 1. Used CountVectorizer to convert preprocessed comments to feature vectors
 </br>
-</br>
 
 ## Algorithms
 1. K-Nearest Neighbors
