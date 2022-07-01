@@ -7,6 +7,7 @@
 ## Project description
 Machine learning techniques are used in this project to categorise comments as bullying or non-bullying. All the trained models are deployed as a web application using Streamlit that can be viewed by clicking the button above. The dataset used for this project has 20000 comments labelled as bullying and non-bullying. The dataset was obtained from the Kaggle website and is uploaded to this repository.
 </br>
+</br>
 
 ## Text preprocessing steps 
 1. Converted text to lower-case
@@ -17,9 +18,11 @@ Machine learning techniques are used in this project to categorise comments as b
 6. Used Lemmatization
 7. Removed words with only one letter
 </br>
+</br>
 
 ## Feature extraction
 1. Used CountVectorizer to convert preprocessed comments to feature vectors
+</br>
 </br>
 
 ## Algorithms
@@ -27,6 +30,7 @@ Machine learning techniques are used in this project to categorise comments as b
 2. Naive Bayes Classifier
 3. Logistic Regression
 4. Support Vector Classifier
+</br>
 </br>
 
 # Results
