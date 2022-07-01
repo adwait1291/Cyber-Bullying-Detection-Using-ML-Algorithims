@@ -23,11 +23,9 @@ The dataset used in this project is taken from the Kaggle website. The dataset h
 6. Used Lemmatization
 7. Removed words with only one letter
 </br>
-</br>
 
 ## Feature extraction
 1. Used CountVectorizer to convert preprocessed comments to feature vectors
-</br>
 </br>
 
 ## Algorithms
@@ -35,7 +33,6 @@ The dataset used in this project is taken from the Kaggle website. The dataset h
 2. Naive Bayes
 3. Logistic Regression
 4. Support Vector Classifier
-</br>
 </br>
 
 # Results
