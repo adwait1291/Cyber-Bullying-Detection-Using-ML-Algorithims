@@ -10,17 +10,17 @@ Machine learning techniques are used in this project to categorise comments as b
 </br>
 
 ## Text preprocessing steps 
-1. Converted text to lower-case
-2. Removed punctuations
-3. Removed words containing numbers
-4. Removed English stopwords
-5. Part of speech tagging
-6. Used Lemmatization
-7. Removed words with only one letter
+1. Converted text to lower-case.
+2. Removed punctuations.
+3. Removed words containing numbers.
+4. Removed English stopwords.
+5. Part of speech tagging.
+6. Used Lemmatization.
+7. Removed words with only one letter.
 </br>
 
 ## Feature extraction
-1. Used CountVectorizer to convert preprocessed comments to feature vectors
+1. Used CountVectorizer to convert pre-processed comments to feature vectors.
 </br>
 
 ## Algorithms
